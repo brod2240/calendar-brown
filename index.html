@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: 'Times New Roman', serif;
+            background-color: #f4e1d2; /* Light cozy color */
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,12 +23,13 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 80%;
+            max-width: 350px; /* Ensures it doesn't stretch too wide on large screens */
         }
 
         .calendar-header {
             text-align: center;
-            font-size: 24px;
+            font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 10px;
             color: #FFB800; /* Cozy yellow/golden */
@@ -41,7 +43,7 @@
         }
 
         .calendar-day {
-            font-size: 18px;
+            font-size: 1.2em;
             padding: 10px;
             background-color: #d4a5a5; /* Soft pinkish color */
             border-radius: 5px;
@@ -61,6 +63,45 @@
             cursor: pointer;
             background-color: #FFB800; /* Hover effect */
             color: #6F4F28;
+        }
+
+        /* Responsive styling for smaller devices */
+        @media (max-width: 600px) {
+            .calendar-container {
+                width: 90%;
+                max-width: 320px; /* Slightly smaller max width for mobile devices */
+                padding: 15px;
+            }
+
+            .calendar-header {
+                font-size: 1.2em; /* Adjust font size for smaller screens */
+            }
+
+            .calendar-day {
+                font-size: 1em; /* Adjust font size for smaller screens */
+                padding: 8px; /* Adjust padding for smaller screens */
+            }
+
+            .calendar-days {
+                grid-template-columns: repeat(7, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .calendar-container {
+                width: 95%;
+                max-width: 280px; /* Even smaller for very small screens */
+                padding: 10px;
+            }
+
+            .calendar-header {
+                font-size: 1.1em;
+            }
+
+            .calendar-day {
+                font-size: 0.9em;
+                padding: 6px;
+            }
         }
     </style>
 </head>
