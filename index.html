@@ -23,8 +23,12 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 350px; /* Ensures it doesn't stretch too wide on large screens */
+            width: 95%;
+            max-width: 500px; /* Ensures it doesn't stretch too wide */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
         }
 
         .calendar-header {
@@ -40,6 +44,8 @@
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
             text-align: center;
+            width: 100%;
+            margin-top: 10px;
         }
 
         .calendar-day {
@@ -67,31 +73,25 @@
 
         /* Responsive styling for smaller devices */
         @media (max-width: 600px) {
-            .calendar-container {
-                width: 90%;
-                max-width: 320px; /* Slightly smaller max width for mobile devices */
-                padding: 15px;
-            }
-
             .calendar-header {
-                font-size: 1.2em; /* Adjust font size for smaller screens */
+                font-size: 1.3em; /* Adjust font size for smaller screens */
             }
 
             .calendar-day {
-                font-size: 1em; /* Adjust font size for smaller screens */
+                font-size: 1.1em; /* Adjust font size for smaller screens */
                 padding: 8px; /* Adjust padding for smaller screens */
             }
 
             .calendar-days {
-                grid-template-columns: repeat(7, 1fr);
+                grid-template-columns: repeat(7, 1fr); /* Maintain 7 columns */
             }
         }
 
         @media (max-width: 400px) {
             .calendar-container {
                 width: 95%;
-                max-width: 280px; /* Even smaller for very small screens */
-                padding: 10px;
+                max-width: 300px; /* Even smaller for very small screens */
+                padding: 15px;
             }
 
             .calendar-header {
@@ -99,7 +99,7 @@
             }
 
             .calendar-day {
-                font-size: 0.9em;
+                font-size: 1em;
                 padding: 6px;
             }
         }
